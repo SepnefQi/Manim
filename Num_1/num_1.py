@@ -137,9 +137,3 @@ class ComboSolve(Scene):
         self.play(FadeOut(end1))
         self.play(FadeIn(end2))
         self.wait(7)
-                
-        
-        
-        
-        
-        
