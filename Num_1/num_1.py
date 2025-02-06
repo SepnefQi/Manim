@@ -2,17 +2,6 @@ from manim import *
 
 class ComboSolve(Scene):
     def construct(self):
-        '''
-        square1 = Square(color=BLUE)
-        circle = Circle(fill_opacity=0.5, color=PINK)
-        square2 = square1.copy().set_color(color=RED).move_to(RIGHT *5)
-        group = Group(square1, square2)
-        self.play(FadeIn(group))
-        self.play(Transform(square1, circle))
-        self.play(Rotate(square2, PI * 20))
-        self.wait(2)
-        '''
-
         equation1 = MathTex("1+22+333+4444+55555+666666+7777777+88888888+999999999")
         equation2 = MathTex("9+98+987+9876+98765+987654+9876543+98765432+987654321")
         equation1.shift(UP)
@@ -21,20 +10,7 @@ class ComboSolve(Scene):
         eq_group.scale(0.8)
         self.play(Write(eq_group))
         task = Text("Какое из этих выражений больше (или они равны)?", font="Noto Sans")
-        '''
-        first_word = Text("Какие возникают первые мысли?", font="Noto Sans")
-        second_word = Text("В первом выражении складываются числа, размер которых такой же, как и цифра, из которой они состоят", font="Noto Sans")
-        third_word = Text("Во втором - числа, состоящие из цифр, стоящих в обратном порядке", font="Noto Sans")
-        second_word.shift(UP)
-        third_word.shift(DOWN)
-        '''
         task.scale(0.7)
-        '''
-        first_word.scale(0.7)
-        second_word.scale(0.4)
-        third_word.scale(0.4)
-        word3_group = VGroup(first_word, second_word, third_word)
-        '''
         self.play(Write(task))
         self.wait(10)
         animations = [
@@ -45,9 +21,6 @@ class ComboSolve(Scene):
             #FadeIn(word3_group[2],shift=2*UP),
         ]
         self.play(AnimationGroup(*animations, lag_ratio=1))
-        #self.wait(10)
-        
-        #self.play(FadeOut(word3_group, shift=DOWN))
         
         n1 = MathTex("1")
         n2 = MathTex("2", "2")
